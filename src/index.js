@@ -47,7 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <PersistGate loading={null} persistor={persistor}>
-          <BrowserRouter>
+          <BrowserRouter basename="goit-react-hw-08-phonebook">
             <ChakraProvider style={styles}>
               <Box w="50%"
                 bgGradient="radial(gray.300, yellow.400, pink.200)"
