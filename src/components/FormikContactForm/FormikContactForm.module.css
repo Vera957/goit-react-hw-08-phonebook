@@ -1,15 +1,16 @@
 .labelFormik {
     width: 100%;
     display: flex;
+    flex-direction: column;
 }
 
 .fieldFormik {
-    min-width: 400px;
+   width: 100%;
     margin-left: auto;
 }
 
 Form{
-    column-gap: 10px;
+    column-gap: 5px;
     display: flex;
     flex-direction: column;
 }

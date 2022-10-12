@@ -5,4 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     list-style: none;
   }
+  input {
+    width: 100%;
+  }
 `;

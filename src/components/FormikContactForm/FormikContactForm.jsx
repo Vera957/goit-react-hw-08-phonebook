@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from "redux/operations";
 import { selectContactsArr } from "redux/selectors";
 import { Button } from '@chakra-ui/react';
+import { StyledFormFormik } from "style/style";
 
 
 export const FormikContactForm = () => {
@@ -34,7 +35,7 @@ export const FormikContactForm = () => {
     return (<>
         <h1>Phonebook</h1>
         <Formik initialValues={initialValues} onSubmit={getValues} validationSchema={shemaContactsForm}>
-            <Form>
+            <StyledFormFormik>
                 <label htmlFor="Name" className={s.labelFormik}>Name
                     <StyledField className={s.fieldFormik} type="text" name="name" id="contactInListName" ></StyledField>
                 </label>
@@ -44,7 +45,7 @@ export const FormikContactForm = () => {
                 </label>
                 <ErrorSpan><ErrorMessage name="number" /></ErrorSpan>
                 <Button type='submit'>Add contact</Button>
-            </Form>
+            </StyledFormFormik>
         </Formik>
     </>)
 }

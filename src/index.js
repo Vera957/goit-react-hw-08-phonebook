@@ -9,7 +9,6 @@ import { store, persistor } from './redux/store';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 import { ChakraProvider } from '@chakra-ui/react';
-//import { mode } from '@chakra-ui/theme-tools';
 import { Box } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react"
 
@@ -21,7 +20,7 @@ const themeChakra= extendTheme({
         color: 'black',
         lineHeight: 'tall',
         bg: 'grey.500',
-        maxW: '50vw',
+        //maxW: '50vw',
         ml: 'auto',
         mr: 'auto',
       },
@@ -31,12 +30,10 @@ const themeChakra= extendTheme({
 
       },
       'input': {
-        //color: 'red',
-        placeholder: 'medium size',
-        size: 'md',
+        //placeholder: 'medium size, smallsize',
+        //size: 'md sm',
         border: '2px',
         p: '2px',
-        //gap: '2px'
 
       },
       'button': {

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Field } from "formik";
 import { NavLink } from "react-router-dom";
+import {Form} from 'formik';
 
 export const StyledLabel = styled.label`
     margin-bottom: ${p => p.theme.space[2]}px;
@@ -22,6 +23,7 @@ export const StyledForm = styled.div`
     padding: ${p => p.theme.space[4]}px;
     margin: ${p => p.theme.space[2]}px;
     border: ${p => p.theme.borders.normal};
+    width:100%;
     //align-items: center;
 `
 
@@ -40,11 +42,12 @@ export const Button = styled.button`
 `
 export const ErrorSpan = styled.span`
     display: block;
-    height: ${p => p.theme.space[5]}px;
+    height: 2em;
     color: ${p => p.theme.colors.danger};
     font-size: ${p => p.theme.fontSizes.xs};
     margin-left: auto;
     justify-content: flex-end;
+    padding: 5px;
 `
 
 export const ListItem = styled.li`
@@ -83,4 +86,8 @@ export const StyledNavLink = styled(NavLink)`
         color: white;
         font-weight: 700;
     }
+`
+
+export const StyledFormFormik = styled(Form)`
+    padding-bottom: 10px;
 `

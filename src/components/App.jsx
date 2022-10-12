@@ -13,10 +13,10 @@ import { Contacts } from "pages/Contacts";
 import { useAuth } from "../hooks/AuthHook";
 
 
-/*const Home = lazy(() => import('../pages/Home'));
-const Register = lazy(() => import('../pages/Register'));
-const LoginPage = lazy(() => import('../pages/Login'));
-const Contacts = lazy(() => import('../pages/Contacts'));*/
+//const Home = lazy(() => import('../pages/Home'));
+//const Register = lazy(() => import('../pages/Register'));
+//const LoginPage = lazy(() => import('../pages/Login'));
+//const Contacts = lazy(() => import('../pages/Contacts'));
 
 
 
