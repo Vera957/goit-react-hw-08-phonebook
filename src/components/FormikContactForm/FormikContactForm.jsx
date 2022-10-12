@@ -1,11 +1,13 @@
 import { Formik, Form, ErrorMessage } from "formik";
 import * as yup from 'yup';
-import { Button, ErrorSpan, StyledField } from "style/style";
+import { ErrorSpan, StyledField } from "style/style";
 import s from './FormikContactForm.module.css';
 import propTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from "redux/operations";
 import { selectContactsArr } from "redux/selectors";
+import { Button } from '@chakra-ui/react';
+
 
 export const FormikContactForm = () => {
     const patternName = /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/;

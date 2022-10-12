@@ -1,6 +1,7 @@
-import { Form, Formik, ErrorMessage, Field } from "formik";
+import { Form, Formik, ErrorMessage } from "formik";
 import { useDispatch } from "react-redux";
 import { logIn } from "redux/auth/operations";
+import { StyledField, Button } from 'style/style';
 
 
 export const Login = () => {
@@ -18,13 +19,13 @@ export const Login = () => {
         <Formik initialValues={{ email: '', password: '' }} onSubmit={handleSubmit} /* validationSchema={shemaContactsForm}*/>
             <Form>
 
-                <Field type="email" name="email" id='newUserEmail' placeholder="email"></Field>
+                <StyledField type="email" name="email" id='newUserEmail' placeholder="email"></StyledField>
                 <ErrorMessage name="email" />
 
-                <Field type="tel" name="password" id='newUserPassword' placeholder="password"></Field>
+                <StyledField type="tel" name="password" id='newUserPassword' placeholder="password"></StyledField>
                 <ErrorMessage name='password' />
 
-                <button type='submit'>Login</button>
+                <Button type='submit'>Login</Button>
             </Form>
         </Formik>
     </>)

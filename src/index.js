@@ -9,37 +9,46 @@ import { store, persistor } from './redux/store';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 import { ChakraProvider } from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
-import { Box } from "@chakra-ui/react"
+//import { mode } from '@chakra-ui/theme-tools';
+import { Box } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react"
 
 
-const styles = {
-  global: (props) => ({
-    body: {
-      fontFamily: 'body',
-      color: mode('gray.800', 'whiteAlpha.900')(props),
-      //bg: mode('white', 'gray.800')(props),
-      lineHeight: 'base',
-      W: "960px",
-      mH: '200px'
+const themeChakra= extendTheme({
+  styles: {
+    global: {
+      'html, body': {
+        color: 'black',
+        lineHeight: 'tall',
+        bg: 'grey.500',
+        maxW: '50vw',
+        ml: 'auto',
+        mr: 'auto',
+      },
+      '*':{
+        p: '2px',
+        gap: '5px'
+
+      },
+      'input': {
+        //color: 'red',
+        placeholder: 'medium size',
+        size: 'md',
+        border: '2px',
+        p: '2px',
+        //gap: '2px'
+
+      },
+      'button': {
+        border: '2px',
+        p: '2px',
+        bg: 'lightgreen'
+      },
+    
     },
-    '*::placeholder': {
-      color: mode('gray.400', 'whiteAlpha.400')(props),
-      p: 2,
-      m: 2,
-    },
-    '*, *::before, &::after': {
-      borderColor: mode('gray.200', 'whiteAlpha.300')(props),
-      wordWrap: 'break-word',
-    },
-    '*': {
-      m: 2,
-    },
-    'input': {
-      border: '1px'
-    }
-  }),
-}
+  },
+})
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -48,9 +57,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <ThemeProvider theme={theme}>
         <PersistGate loading={null} persistor={persistor}>
           <BrowserRouter basename="goit-react-hw-08-phonebook">
-            <ChakraProvider style={styles}>
-              <Box w="50%"
-                bgGradient="radial(gray.300, yellow.400, pink.200)"
+            <ChakraProvider theme={themeChakra}>
+              <Box w="100%"
+                bgGradient="radial(red.300, green.400, pink.200)"
                 p="2"
                 ml='auto'
                 mr='auto'

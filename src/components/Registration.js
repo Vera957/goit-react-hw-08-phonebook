@@ -1,7 +1,8 @@
-import { Form, Formik, ErrorMessage, Field } from "formik";
+import { Form, Formik, ErrorMessage } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "redux/auth/operations";
 import { selectIsLoggedIn } from "redux/selectors";
+import { StyledField, Button } from 'style/style';
 
 export const UserRegistration = () => {
     const logined = useSelector(selectIsLoggedIn)
@@ -23,16 +24,16 @@ export const UserRegistration = () => {
         {!logined && (
             <Formik initialValues={{ name: '', email: '', password: '' }} onSubmit={handleSubmit} /*validationSchema={shemaContactsForm}*/>
                 <Form>
-                    <Field type="text" name="name" id="newUserName" placeholder='name'></Field>
+                    <StyledField type="text" name="name" id="newUserName" placeholder='name'></StyledField>
                     <ErrorMessage name="name" />
 
-                    <Field type="email" name="email" id='newUserEmail' placeholder="email"></Field>
+                    <StyledField type="email" name="email" id='newUserEmail' placeholder="email"></StyledField>
                     <ErrorMessage name="email" />
 
-                    <Field type="password" name="password" id='newUserPassword' placeholder="password"></Field>
+                    <StyledField type="password" name="password" id='newUserPassword' placeholder="password"></StyledField>
                     <ErrorMessage name='password' />
 
-                    <button type='submit'>Register</button>
+                    <Button type='submit'>Register</Button>
                 </Form>
             </Formik>)}
     </>)

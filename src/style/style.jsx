@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Field } from "formik";
+import { NavLink } from "react-router-dom";
 
 export const StyledLabel = styled.label`
     margin-bottom: ${p => p.theme.space[2]}px;
@@ -49,14 +50,10 @@ export const ErrorSpan = styled.span`
 export const ListItem = styled.li`
     display: flex;
     justify-content: space-between;
-    background-color: #e7e1e1;
+    align-items: center;
+    //background-color: #1a291a;
     padding: ${p => p.theme.space[2]}px;
-    &:first-child{
-        margin-top: ${p => p.theme.space[3]}px;
-        }
-    &:nth-of-type(2n){
-        background: lightgrey;
-    }
+    border-bottom: 1px solid #1a291a;
 `
 
 export const StyledField = styled(Field)`
@@ -77,4 +74,13 @@ export const StyledInputTwo = styled.input`
     &:hover, &:focus{
         border-color: ${p => p.theme.colors.accent};
     } 
+`
+
+export const StyledNavLink = styled(NavLink)`
+    text-decoration: underline;
+    padding-bottom: 2px;
+    &.active{
+        color: white;
+        font-weight: 700;
+    }
 `

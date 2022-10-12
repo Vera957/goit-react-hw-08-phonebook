@@ -1,9 +1,10 @@
 import React from "react";
-import { Button, ListItem } from "style/style";
+import { ListItem } from "style/style";
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from "react";
 import { fetchContacts, deleteContact } from "redux/operations";
 import { selectContactsArr, selectFilter } from "redux/selectors";
+import { Button } from '@chakra-ui/react';
 
 
 export const ContactList = ({ children }) => {
