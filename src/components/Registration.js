@@ -24,13 +24,13 @@ export const UserRegistration = () => {
         {!logined && (
             <Formik initialValues={{ name: '', email: '', password: '' }} onSubmit={handleSubmit} /*validationSchema={shemaContactsForm}*/>
                 <Form>
-                    <StyledField type="text" name="name" id="newUserName" placeholder='name'></StyledField>
+                    <StyledField autoComplete='off' type="text" name="name" id="newUserName" placeholder='name'></StyledField>
                     <ErrorMessage name="name" />
 
-                    <StyledField type="email" name="email" id='newUserEmail' placeholder="email"></StyledField>
+                    <StyledField autoComplete='off' type="email" name="email" id='newUserEmail' placeholder="email"></StyledField>
                     <ErrorMessage name="email" />
 
-                    <StyledField type="password" name="password" id='newUserPassword' placeholder="password"></StyledField>
+                    <StyledField autoComplete='off' type="password" name="password" id='newUserPassword' placeholder="password"></StyledField>
                     <ErrorMessage name='password' />
 
                     <Button type='submit'>Register</Button>

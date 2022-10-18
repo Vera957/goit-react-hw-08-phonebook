@@ -20,7 +20,7 @@ const themeChakra= extendTheme({
         color: 'black',
         lineHeight: 'tall',
         bg: 'grey.500',
-        //maxW: '50vw',
+        h: '500px',
         ml: 'auto',
         mr: 'auto',
       },
@@ -60,6 +60,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 p="2"
                 ml='auto'
                 mr='auto'
+                maxW='500px'
               ><App />
               </Box>
             </ChakraProvider>

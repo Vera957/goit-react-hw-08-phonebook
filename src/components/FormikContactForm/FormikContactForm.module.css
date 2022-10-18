@@ -15,3 +15,7 @@ Form{
     flex-direction: column;
 }
 
+ErrorMessage{
+    color: red;
+}
+

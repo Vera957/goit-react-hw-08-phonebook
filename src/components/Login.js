@@ -19,10 +19,10 @@ export const Login = () => {
         <Formik initialValues={{ email: '', password: '' }} onSubmit={handleSubmit} /* validationSchema={shemaContactsForm}*/>
             <Form>
 
-                <StyledField type="email" name="email" id='newUserEmail' placeholder="email"></StyledField>
+                <StyledField autoComplete='off' type="email" name="email" id='newUserEmail' placeholder="email"></StyledField>
                 <ErrorMessage name="email" />
 
-                <StyledField type="tel" name="password" id='newUserPassword' placeholder="password"></StyledField>
+                <StyledField autoComplete='off' type="password" name="password" id='newUserPassword' placeholder="password"></StyledField>
                 <ErrorMessage name='password' />
 
                 <Button type='submit'>Login</Button>

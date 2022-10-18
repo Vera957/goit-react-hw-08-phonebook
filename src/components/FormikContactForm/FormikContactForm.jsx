@@ -1,12 +1,12 @@
-import { Formik, Form, ErrorMessage } from "formik";
+import { ErrorMessage, Formik } from "formik";
 import * as yup from 'yup';
-import { ErrorSpan, StyledField } from "style/style";
+import { StyledField } from "style/style";
 import s from './FormikContactForm.module.css';
 import propTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from "redux/operations";
 import { selectContactsArr } from "redux/selectors";
-import { Button } from '@chakra-ui/react';
+import { Button, Text, chakra } from '@chakra-ui/react';
 import { StyledFormFormik } from "style/style";
 
 
@@ -33,18 +33,18 @@ export const FormikContactForm = () => {
     }
 
     return (<>
-        <h1>Phonebook</h1>
+        <Text textAlign={['center']} fontSize={32}>Phonebook</Text>
         <Formik initialValues={initialValues} onSubmit={getValues} validationSchema={shemaContactsForm}>
             <StyledFormFormik>
-                <label htmlFor="Name" className={s.labelFormik}>Name
+                <chakra.label fontSize={17} htmlFor="Name" className={s.labelFormik}>Name
                     <StyledField className={s.fieldFormik} type="text" name="name" id="contactInListName" ></StyledField>
-                </label>
-                <ErrorSpan><ErrorMessage name="name" /></ErrorSpan>
-                <label htmlFor="Number" className={s.labelFormik}>Number
+                </chakra.label>
+                <ErrorMessage color='red' name="name" />
+                <chakra.label fontSize={17} htmlFor="Number" className={s.labelFormik}>Number
                     <StyledField className={s.fieldFormik} type="tel" name="number" id='numberInListName' placeholder=""></StyledField>
-                </label>
-                <ErrorSpan><ErrorMessage name="number" /></ErrorSpan>
-                <Button type='submit'>Add contact</Button>
+                </chakra.label>
+                <ErrorMessage name="number" />
+                <Button type='submit' ml='auto'>Add contact</Button>
             </StyledFormFormik>
         </Formik>
     </>)

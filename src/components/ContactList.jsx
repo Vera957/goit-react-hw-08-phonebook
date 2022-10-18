@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from "react";
 import { fetchContacts, deleteContact } from "redux/operations";
 import { selectContactsArr, selectFilter } from "redux/selectors";
-import { Button } from '@chakra-ui/react';
+import { Button, Text } from '@chakra-ui/react';
 
 
 export const ContactList = ({ children }) => {
@@ -27,7 +27,7 @@ export const ContactList = ({ children }) => {
 
     return (
         <>
-            <h2>Contacts</h2>
+            <Text fontSize={20} textAlign={['center']}>Contacts</Text>
             {children}
             <ul>
                 {filteredList.map((item) =>
